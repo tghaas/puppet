@@ -45,6 +45,11 @@ class ldap{
     subscribe => File['/etc/sssd/sssd.conf'],
   }
 
+  service {"nscd":
+    ensure    => running,
+    enable    => true,
+  }
+
   file { "/etc/openldap/certs/TC_PROD_CA.pem":
     mode   => 644,
     owner  => root,
@@ -57,6 +62,20 @@ class ldap{
     owner  => root,
     group  => root,
     source => "puppet:///modules/ldap/ldap.conf",
+  }
+
+  file { "/etc/pam.d/system-auth-ac":
+    mode   => 644,
+    owner  => root,
+    group  => root,
+    source => "puppet:///modules/ldap/system-auth-ac",
+  }
+
+  file { "/etc/pam.d/password-auth-ac":
+    mode   => 644,
+    owner  => root,
+    group  => root,
+    source => "puppet:///modules/ldap/system-auth-ac",
   }
 
   file { "/etc/ldap.conf":
