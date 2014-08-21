@@ -1,19 +1,19 @@
 # Purpose: Extract Home Directory
 #
-# default version of java can be overridden in the node manifest:
-# instead of include java use this syntax:
+# Override defaults in the node manifest:
 #
 #
-#class { "java":
-#    java_archive => 'jdk-8u5-linux-x64.tar.gz',
-#    java_home    => '/usr/local/java/jdk1.8.0_05/',
-#    java_folder  => 'jdk1.8.0_05'
+#class { 'home_dir':
+#  home_dir_archive => 'tcnode2.20140819.tgz',
+#  home_dir_owner   => 'web',
+#  home_directory   => '/home/web',
+#  home_dir_group   => 'apps'
 #}
 class home_dir(
-  $home_dir_archive  = 'web.20140819.tgz',
-  $home_dir_owner    = 'web',
-  $home_directory = '/home/${home_dir_owner}',
-  $home_dir_group = 'apps',
+  $home_dir_archive = 'web.20140819.tgz',
+  $home_dir_owner   = 'web',
+  $home_directory   = '/home/${home_dir_owner}',
+  $home_dir_group   = 'apps',
   )
   {
 
