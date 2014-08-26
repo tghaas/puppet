@@ -47,6 +47,7 @@ nfs01.prod				3600 IN A		10.25.73.100
 ntp						3600 IN CNAME	ntp01.prod.topcoder.com.
 ntp01.prod				3600 IN A		192.168.10.51
 oltp01.prod				3600 IN CNAME	db01.prod.topcoder.com.
+smtp 					3600 IN CNAME	smtp01.prod.topcoder.com.
 smtp01.prod				3600 IN A		192.168.12.20
 smtp02.prod				3600 IN CNAME	ntp01.prod.topcoder.com.
 web01.prod				3600 IN A		10.25.50.50

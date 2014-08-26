@@ -12,3 +12,7 @@ class { 'home_dir':
   home_directory   => '/home/web',
   home_dir_group   => 'apps'
 }
+
+class { 'timezone':
+    timezone => 'America/New_York',
+}
