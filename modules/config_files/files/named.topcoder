@@ -1,0 +1,54 @@
+$TTL 3H
+@	IN SOA	@ root.topcoder.com. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+	NS	    @
+	A	    127.0.0.1
+	AAAA	::1
+
+app-wlth13				3600 IN A		192.168.12.85
+app-wlth14				3600 IN A		192.168.12.86
+app-wlth15				3600 IN A		192.168.12.88
+app-wlth16				3600 IN A		192.168.12.84
+app-wlth17				3600 IN A		192.168.12.90
+app-wlth18				3600 IN A		192.168.12.91
+app00.prod				3600 IN A		192.168.12.70
+app01.prod				3600 IN A		192.168.12.71
+app03.prod				3600 IN A		192.168.12.73
+app04.prod				3600 IN A		192.168.12.74
+app05.prod				3600 IN A		192.168.12.75
+app06.prod				3600 IN A		192.168.12.76
+app07.prod				3600 IN A		192.168.12.77
+app08.prod				3600 IN A		192.168.12.78
+app09.prod				3600 IN A		192.168.12.79
+app10.prod				3600 IN A		192.168.12.80
+app11.prod				3600 IN A		192.168.12.151
+arena-app.prod			3600 IN CNAME	farm-controller01.prod.topcoder.com.
+arena-listener.prod		3600 IN CNAME	arena-listener01.prod.topcoder.com.
+arena-listener01.prod	3600 IN A		192.168.7.58
+cach01.prod				3600 IN A		192.168.12.204
+db01.prod				3600 IN A		10.25.94.10
+db02.prod				3600 IN A		10.25.94.52
+dot69.prod				3600 IN CNAME	farm-controller01.prod.topcoder.com.
+dot78.prod				3600 IN CNAME	app08.prod.topcoder.com.
+dot80.prod				3600 IN CNAME	app10.prod.topcoder.com.
+dw01.prod				3600 IN CNAME	db02.prod.topcoder.com.
+farm-controller.prod	3600 IN CNAME	farm-controller01.prod.topcoder.com.
+farm-controller01.prod	3600 IN A		192.168.12.69
+ldap					3600 IN CNAME	ldap1.topcoder.com.
+ldap1					3600 IN A		10.25.71.10
+ldap2					3600 IN A		192.168.12.75
+logstore01.prod			3600 IN A		192.168.12.99
+mysql01.prod			3600 IN CNAME	dw01.prod.topcoder.com.
+nfs01.prod				3600 IN A		10.25.73.100
+ntp						3600 IN CNAME	ntp01.prod.topcoder.com.
+ntp01.prod				3600 IN A		192.168.10.51
+oltp01.prod				3600 IN CNAME	db01.prod.topcoder.com.
+smtp01.prod				3600 IN A		192.168.12.20
+smtp02.prod				3600 IN CNAME	ntp01.prod.topcoder.com.
+web01.prod				3600 IN A		10.25.50.50
+web02.prod				3600 IN A		10.25.50.51
+web03.prod				3600 IN A		10.25.50.52

@@ -1,0 +1,46 @@
+$TTL 3H
+@	IN SOA	@ rname.invalid. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+	NS	    @
+	A	    127.0.0.1
+	AAAA	::1
+
+app00	Host (A)	192.168.12.70
+app01	Host (A)	192.168.12.71
+app03	Host (A)	192.168.12.73
+app04	Host (A)	192.168.12.74
+app05	Host (A)	192.168.12.75
+app06	Host (A)	192.168.12.76
+app07	Host (A)	192.168.12.77
+app08	Host (A)	192.168.12.78
+app09	Host (A)	192.168.12.79
+app10	Host (A)	192.168.12.80
+app11	Host (A)	192.168.12.151
+arena-app	Alias (CNAME)	farm-controller01.prod.topcoder.com.
+arena-listener	Alias (CNAME)	arena-listener01.prod.topcoder.com.
+arena-listener01	Host (A)	192.168.7.58
+bamboo01	Host (A)	192.168.12.152
+cach01	Host (A)	192.168.12.204
+db01	Host (A)	192.168.14.53
+db02	Host (A)	192.168.14.54
+dellblade	Host (A)	192.168.5.14
+dot69	Alias (CNAME)	farm-controller01.prod.topcoder.com.
+dot78	Alias (CNAME)	app08.prod.topcoder.com.
+dot80	Alias (CNAME)	app10.prod.topcoder.com.
+dw01	Alias (CNAME)	db02.prod.topcoder.com.
+farm-controller	Alias (CNAME)	farm-controller01.prod.topcoder.com.
+farm-controller01	Host (A)	192.168.12.69
+logstore01	Host (A)	192.168.12.99
+mysql01	Alias (CNAME)	dw01.prod.topcoder.com.
+nfs01	Host (A)	192.168.12.150
+ntp01	Host (A)	192.168.10.51
+oltp01	Alias (CNAME)	db01.prod.topcoder.com.
+smtp01	Host (A)	192.168.12.20
+smtp02	Alias (CNAME)	ntp01.prod.topcoder.com.
+web01	Host (A)	192.168.7.11
+web02	Host (A)	192.168.7.52
+web03	Host (A)	192.168.7.50
