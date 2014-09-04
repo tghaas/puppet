@@ -1,3 +1,5 @@
+# This requires that the LDAP module has been run prior so it knows
+# about the users, this is 
 define home_dir::dir (
     
       $home_dir_archive = 'web.20140819.tgz',
@@ -10,10 +12,11 @@ define home_dir::dir (
   }
 
   file { "/tmp/${home_dir_archive}" :
-    ensure => present,
-    source => "puppet:///modules/home_dir/${home_dir_archive}",
-    owner  => ec2-user,
-    mode   => '0755',
+    ensure  => present,
+    source  => "puppet:///modules/home_dir/${home_dir_archive}",
+    owner   => ec2-user,
+    mode    => '0755',
+    require => Class['ldap'],
   }
 
   exec { "extract::$title":

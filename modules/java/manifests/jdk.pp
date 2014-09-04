@@ -11,7 +11,8 @@ define java::jdk (
     ensure => present,
     source => "puppet:///modules/java/${java_archive}",
     owner  => ec2-user,
-    mode   => '0755'
+    mode   => '0755',
+    require => Class['java']
   }
 
   exec { "extract::$title":
