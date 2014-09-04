@@ -10,7 +10,7 @@ define java::jdk (
   file { "/tmp/${java_archive}" :
     ensure => present,
     source => "puppet:///modules/java/${java_archive}",
-    owner  => vagrant,
+    owner  => ec2-user,
     mode   => '0755'
   }
 

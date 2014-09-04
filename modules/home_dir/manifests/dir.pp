@@ -12,7 +12,7 @@ define home_dir::dir (
   file { "/tmp/${home_dir_archive}" :
     ensure => present,
     source => "puppet:///modules/home_dir/${home_dir_archive}",
-    owner  => vagrant,
+    owner  => ec2-user,
     mode   => '0755',
   }
 
@@ -25,7 +25,7 @@ define home_dir::dir (
 
   file { "/tmp/${home_dir_owner}" :
     ensure  => directory,
-    owner   => vagrant,
+    owner   => ec2-user,
     require => Exec["extract::$title"],
   }
 
