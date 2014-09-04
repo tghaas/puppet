@@ -16,21 +16,9 @@ define java::jdk (
 
   exec { "extract::$title":
     cwd     => '/tmp',
-    command => "tar xfv ${java_archive}",
+    command => "tar zxf /tmp/${java_archive} -C /usr/local/java/",
     creates => $java_home,
     require => File["/tmp/${java_archive}"],
   }
 
-  file { '/usr/local/java' :
-    ensure  => directory,
-    owner   => vagrant,
-    require => Exec["extract::$title"]
-  }
-
-  exec { "move::$title":
-    cwd     => '/tmp',
-    creates => $java_home,
-    require => File['/usr/local/java'],
-    command => "mv ${java_folder} /usr/local/java/"
-  }
 }

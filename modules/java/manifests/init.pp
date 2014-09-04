@@ -11,4 +11,9 @@
 #}
 class java
   {
+      file { '/usr/local/java' :
+    ensure  => directory,
+    owner   => vagrant,
+
+  }
 }
