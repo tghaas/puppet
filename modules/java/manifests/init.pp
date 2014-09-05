@@ -10,10 +10,10 @@
 #    java_folder  => 'jdk1.8.0_05'
 #}
 class java
-  {
-      file { '/usr/local/java' :
-    ensure  => directory,
-    owner   => vagrant,
-
+{
+  file { '/usr/local/java' :
+    ensure => directory,
+    owner  => root,
+    group  => root,
   }
 }

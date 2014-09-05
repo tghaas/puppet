@@ -11,7 +11,19 @@ java::jdk { 'jdk6.18':
 include ntp
 include ldap
 include home_dir
+include download
 
+download::file {
+  '/tmp/bugs.20140829.tgz':
+    uri     => 'http://192.168.1.110/bugs.20140829.tgz',
+    timeout => 900;
+  '/tmp/wiki.20140820.tgz':
+    uri     => 'http://192.168.1.110/wiki.20140820.tgz',
+    timeout => 900;   
+  '/tmp/forums20140828.tgz':
+    uri     => 'http://192.168.1.110/forums20140828.tgz',
+    timeout => 900;   
+}
 home_dir::dir { 'bugs':
   home_dir_archive => 'bugs.20140829.tgz',
   home_dir_owner   => 'bugs',

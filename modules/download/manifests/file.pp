@@ -1,7 +1,5 @@
-  define download ($uri, $timeout = 300) {
-    package { "wget": 
-      ensure => installed,
-    }
+  define download::file ($uri, $timeout = 300) {
+
       exec {
           "download $uri":
               command => "/usr/bin/wget -q '$uri' -O $name",

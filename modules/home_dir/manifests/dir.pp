@@ -13,10 +13,11 @@ define home_dir::dir (
 
   file { "/tmp/${home_dir_archive}" :
     ensure  => present,
-    source  => "puppet:///modules/home_dir/${home_dir_archive}",
-    owner   => ec2-user,
+    owner   => root,
     mode    => '0755',
-    require => Class['ldap'],
+    require => [Class['ldap'],
+                 Class['download'],
+               ] 
   }
 
   exec { "extract::$title":
