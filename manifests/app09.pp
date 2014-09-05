@@ -1,3 +1,4 @@
+include java
 java::jdk { 'jdk6.18':
   java_archive => 'jdk-6u18-linux-x64.tar.gz',
   java_home    => '/usr/local/java/jdk1.6.0_18_x64/',
