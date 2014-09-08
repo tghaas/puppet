@@ -15,13 +15,13 @@ include download
 
 download::file {
   '/tmp/bugs.20140829.tgz':
-    uri     => 'http://192.168.1.110/bugs.20140829.tgz',
+    uri     => 'http://10.25.45.226/bugs.20140829.tgz',
     timeout => 900;
   '/tmp/wiki.20140820.tgz':
-    uri     => 'http://192.168.1.110/wiki.20140820.tgz',
+    uri     => 'http://10.25.45.226/wiki.20140820.tgz',
     timeout => 900;   
   '/tmp/forums20140828.tgz':
-    uri     => 'http://192.168.1.110/forums20140828.tgz',
+    uri     => 'http://10.25.45.226/forums20140828.tgz',
     timeout => 900;   
 }
 home_dir::dir { 'bugs':
@@ -37,7 +37,7 @@ home_dir::dir { 'bugs':
   home_dir_group   => 'apps';
   
   'forums':
-  home_dir_archive => 'forums20140828.tgz',
+  home_dir_archive => 'forums.20140828.tgz',
   home_dir_owner   => 'forums',
   home_directory   => '/home/forums',
   home_dir_group   => 'apps';
