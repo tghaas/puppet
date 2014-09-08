@@ -20,7 +20,7 @@ download::file {
   '/tmp/wiki.20140820.tgz':
     uri     => 'http://10.25.45.226/wiki.20140820.tgz',
     timeout => 900;   
-  '/tmp/forums20140828.tgz':
+  '/tmp/forums.20140828.tgz':
     uri     => 'http://10.25.45.226/forums.20140828.tgz',
     timeout => 900;   
 }

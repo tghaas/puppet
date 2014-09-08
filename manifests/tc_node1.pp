@@ -1,16 +1,25 @@
-class { 'java':
-  java_archive  => 'jdk-8u5-linux-x64.tar.gz',
-    java_home   => '/usr/local/java/jdk1.8.0_05/',
-    java_folder => 'jdk1.8.0_05'
+include java
+java::jdk { 'jdk6.18':
+  java_archive => 'jdk-6u18-linux-x64.tar.gz',
+  java_home    => '/usr/local/java/jdk1.6.0_18_x64/',
+  java_folder  => 'jdk1.6.0_18_x64';
 }
 include ntp
 include ldap
+include home_dir
+include download
 
-class { 'home_dir':
-  home_dir_archive => 'web.20140819.tgz',
+download::file {
+  '/tmp/tcnode1.20140820.tgz':
+    uri     => 'http://10.25.45.226/tcnode1.20140820.tgz',
+    timeout => 900;
+
+}
+home_dir::dir { 'tcnode01':
+  home_dir_archive => 'tcnode1.20140820.tgz',
   home_dir_owner   => 'web',
   home_directory   => '/home/web',
-  home_dir_group   => 'apps'
+  home_dir_group   => 'apps';
 }
 
 class { 'timezone':
