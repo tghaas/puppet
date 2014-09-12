@@ -42,3 +42,7 @@ home_dir::dir { 'distui':
 class { 'timezone':
     timezone => 'America/New_York',
 }
+
+class { 'nfs_mounts':
+ nfs_mounts => 'tc.nfs_mounts'
+}
