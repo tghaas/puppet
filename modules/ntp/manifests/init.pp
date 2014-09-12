@@ -6,15 +6,15 @@ class ntp {
     ensure => installed,
   }
 
-  service { 'ntpd':
-    ensure => running,
-    enable => true,
-  }
-
   file { '/etc/ntp.conf':
     mode   => '0644',
     owner  => root,
     group  => root,
     source => 'puppet:///modules/ntp/ntp.conf',
+  }
+  service { 'ntpd':
+    ensure  => running,
+    enable  => true,
+    require => file['/etc/ntp.conf']
   }
 }

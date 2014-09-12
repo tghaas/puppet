@@ -43,6 +43,7 @@ class ldap{
     ensure    => running,
     enable    => true,
     subscribe => File['/etc/sssd/sssd.conf'],
+    require => Package['sssd'],
   }
 
   service {"nscd":

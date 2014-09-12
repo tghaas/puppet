@@ -1,7 +1,7 @@
-include ntp
+#include ntp
 #include java
 include ldap
-include download
+#include download
 
 #java::jdk { 'jdk8.05':
 #  java_archive => 'jdk-8u5-linux-x64.tar.gz',
@@ -12,24 +12,31 @@ include download
 #  java_home    => '/usr/local/java/jdk1.7.0_45/',
 #  java_folder  => 'jdk1.7.0_45';
 #}
+#class {'sethostname': 
+#	fqdn => 'PROD.test.topcoder.com'
+#}	
 
-download::file {
-  '/tmp/wiki.20140820.tgz':
-    uri     => 'http://192.168.1.110/wiki.20140820.tgz',
-    timeout => 900;
-  '/tmp/tcnode2.20140819.tgz':
-    uri     => 'http://192.168.1.110/tcnode2.20140819.tgz',
-    timeout => 900;  	
+class { 'nfs_mounts':
+ nfs_mounts => 'tc.nfs_mounts'
 }
-home_dir::dir { 'tcnode2':
-  home_dir_archive => 'tcnode2.20140819.tgz',
-  home_dir_owner   => 'web',
-  home_directory   => '/home/web',
-  home_dir_group   => 'apps';
-  
-  'wiki':
-  home_dir_archive => 'wiki.20140820.tgz',
-  home_dir_owner   => 'wiki',
-  home_directory   => '/home/wiki',
-  home_dir_group   => 'apps';
-}
+
+#download::file {
+#  '/tmp/wiki.20140820.tgz':
+#    uri     => 'http://192.168.1.110/wiki.20140820.tgz',
+#    timeout => 900;
+#  '/tmp/tcnode2.20140819.tgz':
+#   uri     => 'http://192.168.1.110/tcnode2.20140819.tgz',
+#    timeout => 900;  	
+#}
+#home_dir::dir { 'tcnode2':
+#  home_dir_archive => 'tcnode2.20140819.tgz',
+#  home_dir_owner   => 'web',
+#  home_directory   => '/home/web',
+#  home_dir_group   => 'apps';
+#  
+#  'wiki':
+#  home_dir_archive => 'wiki.20140820.tgz',
+#  home_dir_owner   => 'wiki',
+#  home_directory   => '/home/wiki',
+#  home_dir_group   => 'apps';
+#}

@@ -1,0 +1,7 @@
+/bin/mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/tcs-downloads /nfs_shares/tcs-downloads/
+/bin/mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/tcssubmissions/ /nfs_shares/tcssubmissions/
+/bin/mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/studiofiles/ /nfs_shares/studiofiles/
+/bin/mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/member_photos/ /nfs_shares/member_photos/
+/bin/mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/captcha/ /nfs_shares/captcha/
+/bin/mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/invoices/ /nfs_shares/invoices
+/bin/mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/assets/ /nfs_shares/assets
