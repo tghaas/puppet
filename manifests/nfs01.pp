@@ -4,7 +4,11 @@ include ldap
 class { 'timezone':
   timezone => 'America/New_York',
 }
-
+file { '/nfs_shares':
+  ensure => 'directory',
+  owner  => 'root',
+  mode   => '0755',
+}
 class { 'nfs::server':
   exports => [
     '/nfs_shares/studiofiles',
@@ -21,4 +25,5 @@ class { 'nfs::server':
   ],
   networkallowed => '10.0.0.0',
   netmaskallowed => '255.0.0.0',
+  require        => File['/nfs_shares'],
 }
