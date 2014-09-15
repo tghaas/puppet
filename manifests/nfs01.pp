@@ -14,7 +14,6 @@ class { 'nfs::server':
     '/nfs_shares/assets',
     '/nfs_shares/wordpress',
     '/nfs_shares/captcha',
-    '/nfs_shares/forum_files',
     '/nfs_shares/member_photos',
     '/nfs_shares/tcs-downloads',
     '/nfs_shares/tcssubmissions',
