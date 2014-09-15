@@ -45,6 +45,7 @@ ldap1					3600 IN A		10.25.71.10
 ldap2					3600 IN A		192.168.12.75
 logstore01.prod			3600 IN A		192.168.12.99
 mysql01.prod			3600 IN CNAME	dw01.prod.topcoder.com.
+prod.nfs01				3600 IN A 		10.25.73.100
 nfs01.prod				3600 IN A		10.25.73.100
 ntp						3600 IN CNAME	ntp01.prod.topcoder.com.
 ntp01.prod				3600 IN A		192.168.10.51

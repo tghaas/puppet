@@ -13,50 +13,71 @@ class nfs_mounts ( $nfs_mounts ){
   }
   file { "/nfs_shares/studiofiles":
     ensure  => directory,
-    owner   => studio,
-    group   => apps,
+    owner   => 503,
+    group   => 501,
     mode    => 775,
     require => File['/nfs_shares']
   }
   file { "/nfs_shares/tcs-downloads":
     ensure  => directory,
-    owner   => apps,
-    group   => apps,
+    owner   => 501,
+    group   => 501,
     mode    => 775,
     require => File['/nfs_shares']
   }
   file { "/nfs_shares/tcssubmissions":
     ensure  => directory,
-    owner   => apps,
-    group   => apps,
+    owner   => 501,
+    group   => 501,
     mode    => 775,
     require => File['/nfs_shares']
   }
   file { "/nfs_shares/member_photos":
     ensure  => directory,
-    owner   => studio,
-    group   => apps,
+    owner   => 501,
+    group   => 501,
     mode    => 775,
     require => File['/nfs_shares']
   }
   file { "/nfs_shares/assets":
     ensure  => directory,
-    owner   => studio,
-    group   => apps,
+    owner   => 503,
+    group   => 501,
     mode    => 775,
     require => File['/nfs_shares']
   }
   file { "/nfs_shares/invoices":
     ensure  => directory,
-    owner   => studio,
-    group   => apps,
+    owner   => 529,
+    group   => 501,
     mode    => 775,
     require => File['/nfs_shares']
   }
   file { "/nfs_shares/captcha":
     ensure  => directory,
-    owner   => studio,
-    group   => apps,
+    owner   => 501,
+    group   => 501,
+    mode    => 775,
+    require => File['/nfs_shares']
+  }
+  file { "/nfs_shares/forum_files":
+    ensure  => directory,
+    owner   => 506,
+    group   => 501,
+    mode    => 775,
+    require => File['/nfs_shares']
+  }
+  file { "/nfs_shares/jira_attachments":
+    ensure  => directory,
+    owner   => 515,
+    group   => 501,
+    mode    => 775,
+    require => File['/nfs_shares']
+  }
+  file { "/nfs_shares/wiki_attachments":
+    ensure  => directory,
+    owner   => 507,
+    group   => 501,
     mode    => 775,
     require => File['/nfs_shares']
   }

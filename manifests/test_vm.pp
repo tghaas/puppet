@@ -1,6 +1,6 @@
 #include ntp
 #include java
-include ldap
+#$include ldap
 #include download
 
 #java::jdk { 'jdk8.05':
@@ -16,10 +16,20 @@ include ldap
 #	fqdn => 'PROD.test.topcoder.com'
 #}	
 
-class { 'nfs_mounts':
- nfs_mounts => 'tc.nfs_mounts'
-}
+#class { 'nfs_mounts':
+# nfs_mounts => 'tc.nfs_mounts'
+#}
 
+#class { 'nfs::server': }
+
+  class { 'nfs::server':
+    exports => [
+      '/srv/photos',
+      '/srv/videos',
+    ],
+    networkallowed => '10.0.0.0',
+    netmaskallowed => '255.0.0.0',
+  }
 #download::file {
 #  '/tmp/wiki.20140820.tgz':
 #    uri     => 'http://192.168.1.110/wiki.20140820.tgz',

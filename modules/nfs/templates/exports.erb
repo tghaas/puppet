@@ -1,0 +1,3 @@
+<% [exports].flatten.each do |export| -%>
+<%= export %> <%= @networkallowed %>/<%= @netmaskallowed %>(rw,no_root_squash,no_subtree_check)
+<% end -%>

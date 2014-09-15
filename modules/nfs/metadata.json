@@ -1,0 +1,29 @@
+{
+  "description": "Simple module that install NFS, and configure shares",
+  "license": "GNU Public License, Version 3.0",
+  "project_page": "https://github.com/chriscowley/chriscowley-nfs",
+  "version": "0.1.0",
+  "source": "https://github.com/chriscowley/chriscowley-nfs.git",
+  "dependencies": [
+
+  ],
+  "name": "chriscowley-nfs",
+  "author": "chriscowley",
+  "checksums": {
+    "templates/exports.erb": "3df936e69318eca087785f2b4cd16de1",
+    "README.md": "237095d169497842c1ea862cb7824fb7",
+    "manifests/init.pp": "31fb8e34b2f6a3b22ab7813eb59cd8b4",
+    "files/sysconfig-nfs": "2e3411b6d8624ae54f8837245f76f6b9",
+    "manifests/server.pp": "4c979c3bc3640ab148de2209a5b6ab7c",
+    "LICENSE": "d32239bcb673463ab874e80d47fae504",
+    "Rakefile": "50b53fca271ad0f0253fe61e55dfc3f4",
+    "manifests/list_exports.pp": "be75ed598fd92049b941bc2bca6bf612",
+    "Modulefile": "676cea26a41007a06cec0f76a8266724",
+    "spec/fixtures/manifests/site.pp": "d41d8cd98f00b204e9800998ecf8427e",
+    "spec/spec_helper.rb": "792eeb7aa7edafb93e2bc1d27c5e75c5"
+  },
+  "summary": "Module to install NFS",
+  "types": [
+
+  ]
+}

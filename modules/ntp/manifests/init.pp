@@ -15,6 +15,6 @@ class ntp {
   service { 'ntpd':
     ensure  => running,
     enable  => true,
-    require => file['/etc/ntp.conf']
+    require => File['/etc/ntp.conf']
   }
 }

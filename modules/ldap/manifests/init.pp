@@ -39,6 +39,15 @@ class ldap{
     require => Package['sssd'],
    }   
 
+file { "/etc/nscd.conf":
+    ensure  => file,
+    mode    => 600,
+    owner   => root,
+    group   => root,
+    source  => "puppet:///modules/ldap/nscd.conf",
+    require => Package['sssd'],
+   }  
+
   service {"sssd":
     ensure    => running,
     enable    => true,
@@ -49,6 +58,7 @@ class ldap{
   service {"nscd":
     ensure    => running,
     enable    => true,
+    require => File['/etc/nscd.conf']
   }
 
   file { "/etc/openldap/certs/TC_PROD_CA.pem":

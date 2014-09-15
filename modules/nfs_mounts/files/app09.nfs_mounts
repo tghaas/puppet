@@ -1,0 +1,3 @@
+/bin/mount -t nfs prod.nfs01.topcoder.com:/nfs_shares/forum_files /nfs_shares/forum_files
+/bin/mount -t nfs prod.nfs01.topcoder.com:/nfs_shares/jira_attachments /nfs_shares/jira_attachments
+/bin/mount -t nfs prod.nfs01.topcoder.com:/nfs_shares/wiki_attachments /nfs_shares/wiki_attachments

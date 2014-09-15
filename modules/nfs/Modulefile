@@ -1,0 +1,8 @@
+name    'chriscowley-nfs'
+version '0.1.0'
+source 'https://github.com/chriscowley/chriscowley-nfs.git'
+author 'chriscowley'
+license 'GNU Public License, Version 3.0'
+summary 'Module to install NFS'
+description 'Simple module that install NFS, and configure shares'
+project_page 'https://github.com/chriscowley/chriscowley-nfs'
