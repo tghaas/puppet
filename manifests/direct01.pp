@@ -23,5 +23,9 @@ home_dir::dir { 'direct01':
 }
 
 class { 'timezone':
-    timezone => 'America/New_York',
+  timezone => 'America/New_York',
+}
+
+class {'nfs_mounts':
+  nfs_mounts => 'direct.nfs_mounts',
 }

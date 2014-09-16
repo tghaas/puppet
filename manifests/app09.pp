@@ -44,5 +44,9 @@ home_dir::dir { 'bugs':
 }
 
 class { 'timezone':
-    timezone => 'America/New_York',
+  timezone => 'America/New_York',
+}
+
+class {'nfs_mounts':
+  nfs_mounts => 'app09.nfs_mounts',
 }
