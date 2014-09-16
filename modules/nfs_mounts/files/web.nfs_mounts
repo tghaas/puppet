@@ -1,0 +1,1 @@
+/bin/mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/apache_docs /home/apps/apache_docs
