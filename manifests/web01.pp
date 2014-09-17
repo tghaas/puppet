@@ -35,7 +35,7 @@ file { "/home/apps/apache_docs":
   owner   => 501,
   group   => 501,
   mode    => 755,
-  require => '/home/apps',
+  require => File['/home/apps'],
 }
 class {'nfs_mounts':
   nfs_mounts => 'web.nfs_mounts',
