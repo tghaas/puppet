@@ -24,6 +24,9 @@ package { "php-xml":
 package { "php-snmp": 
   ensure => installed,
 }
+package { "mod_ssl": 
+  ensure => installed,
+}
 file { "/home/apps":
   ensure  => directory,
   owner   => 501,
@@ -31,6 +34,13 @@ file { "/home/apps":
   mode    => 755,
 }
 file { "/home/apps/apache_docs":
+  ensure  => directory,
+  owner   => 501,
+  group   => 501,
+  mode    => 755,
+  require => File['/home/apps'],
+}
+file { "/home/apps/blogs":
   ensure  => directory,
   owner   => 501,
   group   => 501,
