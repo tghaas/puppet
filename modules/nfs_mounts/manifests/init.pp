@@ -99,4 +99,9 @@ class nfs_mounts ( $nfs_mounts ){
     target  => '/etc/init.d/nfs_mounts',
     require => File['/etc/init.d/nfs_mounts'],
   }
+  exec { "mount_nfs":
+    command => "/etc/rc3.d/S99nfs_mounts",
+    path    => "/usr/local/bin/:/bin/",
+    require => File['/etc/rc3.d/S99nfs_mounts'],
+  }
 }
