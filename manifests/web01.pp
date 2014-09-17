@@ -41,3 +41,9 @@ class {'nfs_mounts':
   nfs_mounts => 'web.nfs_mounts',
   require    => File['/home/apps/apache_docs'],
 }
+download::file {
+  '/etc/httpd/modules/mod_jk.so':
+    uri     => 'http://10.25.45.226/mod_jk.so',
+    timeout => 900;
+    require => Package['httpd']
+}

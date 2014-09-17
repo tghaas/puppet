@@ -21,28 +21,45 @@
 #}
 
 #class { 'nfs::server': }
+include ntp
+include ldap
 
-file { '/nfs_shares':
-  ensure => 'directory',
+package { "httpd": 
+  ensure => installed,
 }
-
-class { 'nfs::server':
-  exports => [
-    '/nfs_shares/studiofiles',
-    '/nfs_shares/jira_attachments',
-    '/nfs_shares/forum_files',
-    '/nfs_shares/wiki_attachments',
-    '/nfs_shares/assets',
-    '/nfs_shares/wordpress',
-    '/nfs_shares/captcha',
-    '/nfs_shares/member_photos',
-    '/nfs_shares/tcs-downloads',
-    '/nfs_shares/tcssubmissions',
-    '/nfs_shares/invoices',
-  ],
-  networkallowed => '10.0.0.0',
-  netmaskallowed => '255.0.0.0',
-  require        => File['/nfs_shares']
+package { "httpd-devel": 
+  ensure => installed,
+}
+package { "php": 
+  ensure => installed,
+}
+package { "php-gd": 
+  ensure => installed,
+}
+package { "php-mysql": 
+  ensure => installed,
+}
+package { "php-ldap": 
+  ensure => installed,
+}
+package { "php-xml": 
+  ensure => installed,
+}
+package { "php-snmp": 
+  ensure => installed,
+}
+file { "/home/apps":
+  ensure  => directory,
+  owner   => 501,
+  group   => 501,
+  mode    => 755,
+}
+file { "/home/apps/apache_docs":
+  ensure  => directory,
+  owner   => 501,
+  group   => 501,
+  mode    => 755,
+  require => File['/home/apps'],
 }
 #download::file {
 #  '/tmp/wiki.20140820.tgz':
