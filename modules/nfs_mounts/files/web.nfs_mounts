@@ -1,1 +1,4 @@
-/bin/mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/apache_docs /home/apps/apache_docs
+/bin/mount -t nfs prod.nfs01.topcoder.com:/nfs_shares/apache_docs /home/apps/apache_docs
+/bin/mount -t nfs prod.nfs01.topcoder.com:/nfs_shares/wordpress /home/apps/blogs
+/bin/mount -t nfs prod.nfs01.topcoder.com:/nfs_shares/member_photos /nfs_shares/member_photos
+/bin/mount -t nfs prod.nfs01.topcoder.com:/nfs_shares/captcha /nfs_shares/captcha
