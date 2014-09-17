@@ -44,6 +44,6 @@ class {'nfs_mounts':
 download::file {
   '/etc/httpd/modules/mod_jk.so':
     uri     => 'http://10.25.45.226/mod_jk.so',
-    timeout => 900;
-    require => Package['httpd']
+    timeout => 900,
+    require => Package['httpd'];
 }
