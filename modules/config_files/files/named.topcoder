@@ -12,7 +12,7 @@ $TTL 3H
 app-wlth13				3600 IN A		192.168.12.85
 app-wlth14				3600 IN A		192.168.12.86
 app-wlth15				3600 IN A		192.168.12.88
-app-wlth16				3600 IN A		192.168.12.84
+app-wlth16				3600 IN A		10.25.81.76
 app-wlth17				3600 IN A		192.168.12.90
 app-wlth18				3600 IN A		192.168.12.91
 app00.prod				3600 IN A		192.168.12.70
@@ -45,7 +45,11 @@ ldap1					3600 IN A		10.25.71.10
 ldap2					3600 IN A		192.168.12.75
 logstore01.prod			3600 IN A		192.168.12.99
 mysql01.prod			3600 IN CNAME	dw01.prod.topcoder.com.
-prod.nfs01				3600 IN A 		10.25.73.100
+prod.app09				3600 IN A		10.25.81.79
+prod.app10				3600 IN A		10.25.81.80
+prod.direct01			3600 IN CNAME	10.25.81.76
+prod.nfs01				3600 IN A		10.25.73.100
+prod.oltp01				3600 IN A		10.25.94.50
 nfs01.prod				3600 IN A		10.25.73.100
 ntp						3600 IN CNAME	ntp01.prod.topcoder.com.
 ntp01.prod				3600 IN A		192.168.10.51

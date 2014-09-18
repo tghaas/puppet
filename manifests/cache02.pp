@@ -1,13 +1,9 @@
 include java
-java::jdk { 'jdk5.11':
-  java_archive => 'jdk-1_5_0_11-linux-i586.tar.gz',
-  java_home    => '/usr/local/java/jdk1.5.0_11/',
-  java_folder  => 'jdk1.5.0_11';
-
-  'jdk5.12':
-  java_archive => 'jdk-1_5_0_12-linux-i586.tar.gz',
-  java_home    => '/usr/local/java/jdk1.5.0_12/',
-  java_folder  => 'jdk1.5.0_12';
+java::jdk { 
+  'jdk6.18':
+  java_archive => 'jdk-6u18-linux-x64.tar.gz',
+  java_home    => '/usr/local/java/jdk1.6.0_18_x64/',
+  java_folder  => 'jdk1.6.0_18_x64';
 }
 include ntp
 include ldap
