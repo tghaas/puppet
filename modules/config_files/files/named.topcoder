@@ -11,7 +11,7 @@ $TTL 3H
 
 app-wlth13				3600 IN A		192.168.12.85
 app-wlth14				3600 IN A		192.168.12.86
-app-wlth15				3600 IN A		192.168.12.88
+app-wlth15				3600 IN CNAME	prod.tcnode02.topcoder.com
 app-wlth16				3600 IN A		10.25.81.76
 app-wlth17				3600 IN A		192.168.12.90
 app-wlth18				3600 IN A		192.168.12.91
@@ -29,6 +29,8 @@ app11.prod				3600 IN A		192.168.12.151
 arena-app.prod			3600 IN CNAME	farm-controller01.prod.topcoder.com.
 arena-listener.prod		3600 IN CNAME	arena-listener01.prod.topcoder.com.
 arena-listener01.prod	3600 IN A		192.168.7.58
+cache-wlth01			3600 IN CNAME	prod.cache01.topcoder.com.
+cache01.prod			3500 IN A		10.25.76.10
 cach01.prod				3600 IN A		192.168.12.204
 db01.prod				3600 IN A		10.25.94.10
 db02.prod				3600 IN A		10.25.94.52
@@ -47,9 +49,12 @@ logstore01.prod			3600 IN A		192.168.12.99
 mysql01.prod			3600 IN CNAME	dw01.prod.topcoder.com.
 prod.app09				3600 IN A		10.25.81.79
 prod.app10				3600 IN A		10.25.81.80
+prod.cache01			3600 IN A		10.25.76.10
+prod.cache02			3600 IN A		10.25.76.11
 prod.direct01			3600 IN CNAME	10.25.81.76
 prod.nfs01				3600 IN A		10.25.73.100
 prod.oltp01				3600 IN A		10.25.94.50
+prod.tcnode02			3600 IN A 		10.25.81.
 nfs01.prod				3600 IN A		10.25.73.100
 ntp						3600 IN CNAME	ntp01.prod.topcoder.com.
 ntp01.prod				3600 IN A		192.168.10.51
