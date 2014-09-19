@@ -25,3 +25,7 @@ home_dir::dir { 'tcnode01':
 class { 'timezone':
     timezone => 'America/New_York',
 }
+
+class {'nfs_mounts':
+  nfs_mounts => 'tc.nfs_mounts',
+}
