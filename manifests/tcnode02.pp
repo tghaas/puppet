@@ -30,7 +30,7 @@ class {'nfs_mounts':
   nfs_mounts => 'tc.nfs_mounts',
 }
 
-file { 'jdk1.6.0_18':
+file { '/usr/local/java/jdk1.6.0_18':
   ensure  => 'link',
   target  => '/usr/local/java/jdk1.6.0_18_x64/',
   require => Java::Jdk['jdk6.18'],
