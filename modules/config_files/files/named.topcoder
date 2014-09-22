@@ -54,7 +54,7 @@ prod.cache02			3600 IN A		10.25.76.11
 prod.direct01			3600 IN CNAME	10.25.81.76
 prod.nfs01				3600 IN A		10.25.73.100
 prod.oltp01				3600 IN A		10.25.94.50
-prod.tcnode02			3600 IN A 		10.25.81.
+prod.tcnode02			3600 IN A 		10.25.81.78
 nfs01.prod				3600 IN A		10.25.73.100
 ntp						3600 IN CNAME	ntp01.prod.topcoder.com.
 ntp01.prod				3600 IN A		192.168.10.51
