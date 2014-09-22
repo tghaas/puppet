@@ -1,11 +1,11 @@
-#include ntp
+include ntp
 include java
-#$include ldap
-#include download
+include ldap
+include download
 
 java::jdk { 'jdk8.05':
   java_archive => 'jdk-8u5-linux-x64.tar.gz',
-  java_home    => '/usr/local/java/jdk1.8',
+  java_home    => '/usr/local/java/jdk1.8.0_05',
   java_folder  => 'jdk1.8.0_05';
 #  'jdk7.45':
 #  java_archive => 'jdk-7u45-linux-x64.tar.gz',
@@ -21,7 +21,11 @@ java::jdk { 'jdk8.05':
 #}
 
 #class { 'nfs::server': }
-
+file { '/usr/local/java/jdk1.8':
+  ensure  => 'link',
+  target  => '/usr/local/java/jdk1.8.0_05',
+  require => Java::Jdk['jdk8.05'],
+}
 #download::file {
 #  '/tmp/wiki.20140820.tgz':
 #    uri     => 'http://192.168.1.110/wiki.20140820.tgz',
