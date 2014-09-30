@@ -1,0 +1,2 @@
+mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/tcs-downloads/ /nfs_shares/tcs-downloads
+mount -t nfs nfs01.prod.topcoder.com:/nfs_shares/tcssubmissions /nfs_shares/tcssubmissions
