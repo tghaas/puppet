@@ -6,6 +6,7 @@ define home_dir::dir (
       $home_dir_owner   = 'web',
       $home_directory   = '/home/${home_dir_owner}',
       $home_dir_group   = 'apps',
+      $timeout          = '600',
   ) {
   Exec {
     path => [ '/usr/bin', '/bin', '/usr/sbin']
@@ -25,6 +26,7 @@ define home_dir::dir (
     command => "tar xfv ${home_dir_archive}",
     creates => $home_directory,
     require => File["/tmp/${home_dir_archive}"],
+    timeout => $timeout
   }
 
   file { "/tmp/${home_dir_owner}" :
