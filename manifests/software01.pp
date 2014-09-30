@@ -17,7 +17,9 @@ download::file {
   '/tmp/software.20140929.tgz':
     uri     => 'http://10.25.45.226/software.20140929.tgz',
     timeout => 900;
-
+  '/tmp/tt.20140929.tgz':
+    uri     => 'http://10.25.45.226/tt.20140929.tgz',
+    timeout => 900;
 }
 home_dir::dir { 'apps':
   home_dir_archive => 'software.20140929.tgz',
