@@ -15,7 +15,7 @@ download::file {
     timeout => 900;
 
 }
-home_dir::dir { 'studio01':
+home_dir::dir { 'studio':
   home_dir_archive => 'studio.20140910.tgz',
   home_dir_owner   => 'studio',
   home_directory   => '/home/studio',

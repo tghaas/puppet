@@ -19,7 +19,7 @@ download::file {
     timeout => 900;
 
 }
-home_dir::dir { 'software01':
+home_dir::dir { 'apps':
   home_dir_archive => 'software.20140929.tgz',
   home_dir_owner   => 'apps',
   home_directory   => '/home/apps',
