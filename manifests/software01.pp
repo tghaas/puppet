@@ -24,7 +24,7 @@ home_dir::dir { 'software01':
   home_dir_owner   => 'apps',
   home_directory   => '/home/apps',
   home_dir_group   => 'apps';
-  'software01':
+  'tt':
   home_dir_archive => 'tt.20140929.tgz',
   home_dir_owner   => 'tt',
   home_directory   => '/home/tt',
