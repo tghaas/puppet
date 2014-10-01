@@ -17,7 +17,7 @@ define home_dir::dir (
     owner   => root,
     mode    => '0755',
     require => [Class['ldap'],
-                 Class['download'],
+                 Download::File["/tmp/${home_dir_archive}"],
                ] 
   }
 

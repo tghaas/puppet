@@ -27,14 +27,7 @@ include bash
 #  target  => '/usr/local/java/jdk1.8.0_05',
 #  require => Java::Jdk['jdk8.05'],
 #}
-download::file {
-  '/tmp/wiki.20140820.tgz':
-    uri     => 'http://192.168.1.134/wiki.20140820.tgz',
-    timeout => 900;
-  '/tmp/tcnode2.20140819.tgz':
-   uri     => 'http://192.168.1.134/tcnode2.20140819.tgz',
-    timeout => 900;  	
-}
+
 home_dir::dir { 'tcnode2':
   home_dir_archive => 'tcnode2.20140819.tgz',
   home_dir_owner   => 'web',
@@ -46,4 +39,12 @@ home_dir::dir { 'tcnode2':
   home_dir_owner   => 'wiki',
   home_directory   => '/home/wiki',
   home_dir_group   => 'apps';
+}
+download::file {
+  '/tmp/wiki.20140820.tgz':
+    uri     => 'http://192.168.1.134/wiki.20140820.tgz',
+    timeout => 900;
+  '/tmp/tcnode2.20140819.tgz':
+   uri     => 'http://192.168.1.134/tcnode2.20140819.tgz',
+    timeout => 900;   
 }
