@@ -13,7 +13,7 @@ define home_dir::dir (
   }
 
   file { "/tmp/${home_dir_archive}" :
-    ensure  => present,
+    ensure  => file,
     owner   => root,
     mode    => '0755',
     require => [Class['ldap'],
