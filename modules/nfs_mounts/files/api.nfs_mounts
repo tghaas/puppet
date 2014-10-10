@@ -1,0 +1,3 @@
+/bin/mount -t nfs prod.nfs01.topcoder.com:/nfs_shares/tcs-downloads /nfs_shares/tcs-downloads/
+/bin/mount -t nfs prod.nfs01.topcoder.com:/nfs_shares/tcssubmissions/ /nfs_shares/tcssubmissions/
+/bin/mount -t nfs prod.nfs01.topcoder.com:/nfs_shares/studiofiles/ /nfs_shares/studiofiles/
