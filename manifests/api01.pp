@@ -26,5 +26,5 @@ class {'nfs_mounts':
 }
 
 class {'nodejs':
-  version => '0.10.30'
+  version => 'v0.10.30'
 }
