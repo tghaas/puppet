@@ -30,14 +30,14 @@ java::jdk { 'jdk8.05':
 class {'nodejs':
   version => 'v0.10.30'
 }
-exec { 'install npm java':
-  path        => '/usr/bin:/usr/sbin:/usr/local/java/jdk1.8.0_05/bin',
-  environment => 'JAVA_HOME=/usr/local/java/jdk1.8.0_05',
-  command     => '/usr/local/node/node-default/bin/npm install java &>/dev/null',
-  require     => [ Class['nodejs'],
-         Java::Jdk['jdk8.05'],
-         ]
- }
+#exec { 'install npm java':
+#  path        => '/usr/bin:/usr/sbin:/usr/local/java/jdk1.8.0_05/bin',
+#  environment => 'JAVA_HOME=/usr/local/java/jdk1.8.0_05',
+#  command     => '/usr/local/node/node-default/bin/npm install java &>/dev/null',
+#  require     => [ Class['nodejs'],
+#         Java::Jdk['jdk8.05'],
+#         ]
+# }
 #package {'java-1.7.0-openjdk':
 #  ensure => present,
 #}

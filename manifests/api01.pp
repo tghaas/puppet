@@ -3,7 +3,12 @@ include ntp
 include ldap
 include home_dir
 include download
-
+include java
+java::jdk { 'jdk7.45':
+  java_archive => 'jdk-7u45-linux-x64.tar.gz',
+  java_home    => '/usr/local/java/jdk1.7.0_45/',
+  java_folder  => 'jdk1.7.0_45';
+}
 download::file {
   '/tmp/node.20141008.tgz':
     uri     => 'http://10.25.45.226/node.20141008.tgz',
@@ -27,4 +32,10 @@ class {'nfs_mounts':
 
 class {'nodejs':
   version => 'v0.10.30'
+}
+
+package { 'forever':
+  ensure   => present,
+  provider => 'npm',
+  require  => Class['nodejs'],
 }
