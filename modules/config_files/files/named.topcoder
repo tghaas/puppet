@@ -9,12 +9,13 @@ $TTL 3H
 	A	    127.0.0.1
 	AAAA	::1
 
+apirediscache			3600 IN CNAME	apicache.etcbyy.0001.use1.cache.amazonaws.com
 app-wlth13				3600 IN A		192.168.12.85
-app-wlth14				3600 IN A		192.168.12.86
-app-wlth15				3600 IN CNAME	prod.tcnode02.topcoder.com
+app-wlth14				3600 IN CNAME	prod.studio01.topcoder.com.
+app-wlth15				3600 IN CNAME	prod.tcnode02.topcoder.com.
 app-wlth16				3600 IN A		10.25.81.76
 app-wlth17				3600 IN A		192.168.12.90
-app-wlth18				3600 IN A		192.168.12.91
+app-wlth18				3600 IN CNAME		prod.software01.topcoder.com.
 app00.prod				3600 IN A		192.168.12.70
 app01.prod				3600 IN A		192.168.12.71
 app03.prod				3600 IN A		192.168.12.73
@@ -23,17 +24,18 @@ app05.prod				3600 IN A		192.168.12.75
 app06.prod				3600 IN A		192.168.12.76
 app07.prod				3600 IN A		192.168.12.77
 app08.prod				3600 IN A		192.168.12.78
-app09.prod				3600 IN A		192.168.12.79
-app10.prod				3600 IN A		192.168.12.80
+app09.prod				3600 IN CNAME           prod.app09.topcoder.com.
+app10.prod				3600 IN CNAME	prod.app10.topcoder.com.
 app11.prod				3600 IN A		192.168.12.151
+app1b					3600 IN CNAME	prod.jboss-api01.topcoder.com.
 arena-app.prod			3600 IN CNAME	farm-controller01.prod.topcoder.com.
 arena-listener.prod		3600 IN CNAME	arena-listener01.prod.topcoder.com.
 arena-listener01.prod	3600 IN A		192.168.7.58
 cache-wlth01			3600 IN CNAME	prod.cache01.topcoder.com.
 cache01.prod			3500 IN A		10.25.76.10
 cach01.prod				3600 IN A		192.168.12.204
-db01.prod				3600 IN A		10.25.94.10
-db02.prod				3600 IN A		10.25.94.52
+db01.prod				3600 IN A		10.25.94.50
+db02.prod				3600 IN A		10.25.94.51
 dns01					3600 IN A 		10.25.70.15
 dns02					3600 IN A 		10.25.70.16
 dot69.prod				3600 IN CNAME	farm-controller01.prod.topcoder.com.
@@ -57,6 +59,8 @@ prod.direct-api01		3600 IN A 		10.25.80.51
 prod.jboss-api01		3600 IN A 		10.25.81.81
 prod.nfs01				3600 IN A		10.25.73.100
 prod.oltp01				3600 IN A		10.25.94.50
+prod.software01			3600 IN A 		10.25.81.75
+prod.studio01			3600 IN A 		10.25.81.74
 prod.tcnode02			3600 IN A 		10.25.81.78
 prod.web01				3600 IN A 		10.25.50.50
 prod.web02				3600 IN A 		10.25.50.51
