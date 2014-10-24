@@ -1,76 +1,88 @@
 $TTL 3H
-@	IN SOA	@ root.topcoder.com. (
-					0	; serial
-					1D	; refresh
-					1H	; retry
-					1W	; expire
-					3H )	; minimum
-	NS	    @
-	A	    127.0.0.1
-	AAAA	::1
+@       IN SOA  @ root.topcoder.com. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+        NS          @
+        A           127.0.0.1
+        AAAA    ::1
 
-apirediscache			3600 IN CNAME	apicache.etcbyy.0001.use1.cache.amazonaws.com
-app-wlth13				3600 IN A		192.168.12.85
-app-wlth14				3600 IN CNAME	prod.studio01.topcoder.com.
-app-wlth15				3600 IN CNAME	prod.tcnode02.topcoder.com.
-app-wlth16				3600 IN A		10.25.81.76
-app-wlth17				3600 IN A		192.168.12.90
-app-wlth18				3600 IN CNAME		prod.software01.topcoder.com.
-app00.prod				3600 IN A		192.168.12.70
-app01.prod				3600 IN A		192.168.12.71
-app03.prod				3600 IN A		192.168.12.73
-app04.prod				3600 IN A		192.168.12.74
-app05.prod				3600 IN A		192.168.12.75
-app06.prod				3600 IN A		192.168.12.76
-app07.prod				3600 IN A		192.168.12.77
-app08.prod				3600 IN A		192.168.12.78
-app09.prod				3600 IN CNAME           prod.app09.topcoder.com.
-app10.prod				3600 IN CNAME	prod.app10.topcoder.com.
-app11.prod				3600 IN A		192.168.12.151
-app1b					3600 IN CNAME	prod.jboss-api01.topcoder.com.
-arena-app.prod			3600 IN CNAME	farm-controller01.prod.topcoder.com.
-arena-listener.prod		3600 IN CNAME	arena-listener01.prod.topcoder.com.
-arena-listener01.prod	3600 IN A		192.168.7.58
-cache-wlth01			3600 IN CNAME	prod.cache01.topcoder.com.
-cache01.prod			3500 IN A		10.25.76.10
-cach01.prod				3600 IN A		192.168.12.204
-db01.prod				3600 IN A		10.25.94.50
-db02.prod				3600 IN A		10.25.94.51
-dns01					3600 IN A 		10.25.70.15
-dns02					3600 IN A 		10.25.70.16
-dot69.prod				3600 IN CNAME	farm-controller01.prod.topcoder.com.
-dot78.prod				3600 IN CNAME	app08.prod.topcoder.com.
-dot80.prod				3600 IN CNAME	app10.prod.topcoder.com.
-dw01.prod				3600 IN CNAME	db02.prod.topcoder.com.
-farm-controller.prod	3600 IN CNAME	farm-controller01.prod.topcoder.com.
-farm-controller01.prod	3600 IN A		192.168.12.69
-ldap					3600 IN CNAME	ldap1.topcoder.com.
-ldap1					3600 IN A		10.25.71.10
-ldap2					3600 IN A		192.168.12.75
-logstore01.prod			3600 IN A		192.168.12.99
-mysql01.prod			3600 IN CNAME	dw01.prod.topcoder.com.
-prod.api01				3600 IN A 		10.25.80.50
-prod.app09				3600 IN A		10.25.81.79
-prod.app10				3600 IN A		10.25.81.80
-prod.cache01			3600 IN A		10.25.76.10
-prod.cache02			3600 IN A		10.25.76.11
-prod.direct01			3600 IN CNAME	10.25.81.76
-prod.direct-api01		3600 IN A 		10.25.80.51
-prod.jboss-api01		3600 IN A 		10.25.81.81
-prod.nfs01				3600 IN A		10.25.73.100
-prod.oltp01				3600 IN A		10.25.94.50
-prod.software01			3600 IN A 		10.25.81.75
-prod.studio01			3600 IN A 		10.25.81.74
-prod.tcnode02			3600 IN A 		10.25.81.78
-prod.web01				3600 IN A 		10.25.50.50
-prod.web02				3600 IN A 		10.25.50.51
-nfs01.prod				3600 IN A		10.25.73.100
-ntp						3600 IN CNAME	ntp01.prod.topcoder.com.
-ntp01.prod				3600 IN A		192.168.10.51
-oltp01.prod				3600 IN CNAME	db01.prod.topcoder.com.
-smtp 					3600 IN CNAME	smtp01.prod.topcoder.com.
-smtp01.prod				3600 IN A		192.168.12.20
-smtp02.prod				3600 IN CNAME	ntp01.prod.topcoder.com.
-web01.prod				3600 IN A		10.25.50.50
-web02.prod				3600 IN A		10.25.50.51
-web03.prod				3600 IN A		10.25.50.52
+api                                     3600 IN A               10.25.45.102
+apirediscache                           3600 IN CNAME           apicache.etcbyy.0001.use1.cache.amazonaws.com
+app-wlth13                              3600 IN A               192.168.12.85
+app-wlth14                              3600 IN CNAME           prod.studio01.topcoder.com.
+app-wlth15                              3600 IN CNAME           prod.tcnode02.topcoder.com.
+app-wlth16                              3600 IN A               10.25.81.76
+app-wlth17                              3600 IN A               192.168.12.90
+app-wlth18                              3600 IN CNAME           prod.software01.topcoder.com.
+app00.prod                              3600 IN A               192.168.12.70
+app01.prod                              3600 IN A               192.168.12.71
+app03.prod                              3600 IN A               192.168.12.73
+app04.prod                              3600 IN A               192.168.12.74
+app05.prod                              3600 IN A               192.168.12.75
+app06.prod                              3600 IN A               192.168.12.76
+app07.prod                              3600 IN A               192.168.12.77
+app08.prod                              3600 IN A               192.168.12.78
+app09.prod                              3600 IN CNAME           prod.app09.topcoder.com.
+app10.prod                              3600 IN CNAME           prod.app10.topcoder.com.
+app11.prod                              3600 IN A               192.168.12.151
+app1b                                   3600 IN CNAME           prod.jboss-api01.topcoder.com.
+apps                                    3600 IN A               10.25.45.104
+arena                                   3600 IN A               10.25.45.105
+arenaws                                 3600 IN A               10.25.45.106
+arena-app.prod                          3600 IN CNAME           farm-controller01.prod.topcoder.com.
+arena-listener.prod                     3600 IN CNAME           arena-listener01.prod.topcoder.com.
+arena-listener01.prod                   3600 IN A               192.168.7.58
+cache-wlth01                            3600 IN CNAME           prod.cache01.topcoder.com.
+cache01.prod                            3600 IN A               10.25.76.10
+cach01.prod                             3600 IN A               10.25.76.10
+coder                                   3600 IN A               10.25.45.111
+community                               3600 IN A               10.25.45.103
+db01.prod                               3600 IN A               10.25.94.50
+db02.prod                               3600 IN A               10.25.94.51
+dns01                                   3600 IN A               10.25.70.15
+dns02                                   3600 IN A               10.25.70.16
+dot69.prod                              3600 IN CNAME           farm-controller01.prod.topcoder.com.
+dot78.prod                              3600 IN CNAME           app08.prod.topcoder.com.
+dot80.prod                              3600 IN CNAME           app10.prod.topcoder.com.
+dw01.prod                               3600 IN CNAME           db02.prod.topcoder.com.
+farm-controller.prod                    3600 IN CNAME           farm-controller01.prod.topcoder.com.
+farm-controller01.prod                  3600 IN A               192.168.12.69
+ldap                                    3600 IN CNAME           ldap1.topcoder.com.
+ldap1                                   3600 IN A               10.25.71.10
+ldap2                                   3600 IN A               192.168.12.75
+logstore01.prod                         3600 IN A               192.168.12.99
+mysql01.prod                            3600 IN CNAME           dw01.prod.topcoder.com.
+prod.api01                              3600 IN A               10.25.80.50
+prod.app09                              3600 IN A               10.25.81.79
+prod.app10                              3600 IN A               10.25.81.80
+prod.cache01                            3600 IN A               10.25.76.10
+prod.cache02                            3600 IN A               10.25.76.11
+prod.direct01                           3600 IN A               10.25.81.76
+prod.direct-api01                       3600 IN A               10.25.80.51
+prod.jboss-api01                        3600 IN A               10.25.81.81
+prod.nfs01                              3600 IN A               10.25.73.100
+prod.oltp01                             3600 IN A               10.25.94.50
+prod.software01                         3600 IN A               10.25.81.75
+prod.studio01                           3600 IN A               10.25.81.74
+prod.svn01                              3600 IN A               10.25.50.250
+prod.tcnode02                           3600 IN A               10.25.81.78
+prod.web01                              3600 IN A               10.25.50.50
+prod.web02                              3600 IN A               10.25.50.51
+nfs01.prod                              3600 IN A               10.25.73.100
+ntp01                                   3600 IN CNAME           ntp01.prod.topcoder.com.
+ntp01.prod                              3600 IN A               192.168.10.51
+oltp01.prod                             3600 IN CNAME           db01.prod.topcoder.com.
+smtp                                    3600 IN CNAME           smtp01.prod.topcoder.com.
+smtp01.prod                             3600 IN A               192.168.12.20
+smtp02.prod                             3600 IN CNAME           ntp01.prod.topcoder.com.
+software                                3600 IN A               10.25.45.110
+studio                                  3600 IN A               10.25.45.109
+tunnel1                                 3600 IN A               10.25.45.107
+tunnel2                                 3600 IN A               10.25.45.108
+web01.prod                              3600 IN A               10.25.50.50
+web02.prod                              3600 IN A               10.25.50.51
+web03.prod                              3600 IN A               10.25.50.52
+www                                     3600 IN A               10.25.45.101
