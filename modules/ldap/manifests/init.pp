@@ -22,13 +22,13 @@ class ldap{
     ensure => installed,
   }   
 
- # package { "sssd-tools": 
- #   ensure => installed,
- # }  
-
-  package { "libsss_sudo": 
+  package { "sssd-tools": 
     ensure => installed,
   }  
+
+ # package { "libsss_sudo": 
+ #   ensure => installed,
+ # }  
     
   file { "/etc/sssd/sssd.conf":
     ensure  => file,
