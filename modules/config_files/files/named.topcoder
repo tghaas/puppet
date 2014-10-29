@@ -8,9 +8,13 @@ $TTL 3H
         NS          @
         A           127.0.0.1
         AAAA    ::1
-
+topcoder.com.							3600 IN MX 1            ASPMX.L.GOOGLE.COM.
+topcoder.com.							3600 IN MX 5            ALT1.ASPMX.L.GOOGLE.COM.
+topcoder.com.							3600 IN MX 5            ALT2.ASPMX.L.GOOGLE.COM.
+topcoder.com.							3600 IN MX 10           ASPMX2.GOOGLEMAIL.COM.
+topcoder.com.							3600 IN MX 10           ASPMX3.GOOGLEMAIL.COM.
 api                                     3600 IN A               10.25.45.102
-apirediscache                           3600 IN CNAME           apicache.etcbyy.0001.use1.cache.amazonaws.com
+apirediscache                           3600 IN CNAME           apicache.etcbyy.0001.use1.cache.amazonaws.com.
 app-wlth13                              3600 IN A               192.168.12.85
 app-wlth14                              3600 IN CNAME           prod.studio01.topcoder.com.
 app-wlth15                              3600 IN CNAME           prod.tcnode02.topcoder.com.
@@ -67,6 +71,7 @@ prod.nfs01                              3600 IN A               10.25.73.100
 prod.oltp01                             3600 IN A               10.25.94.50
 prod.software01                         3600 IN A               10.25.81.75
 prod.studio01                           3600 IN A               10.25.81.74
+prod.smtp01                             3600 IN A               10.25.70.10
 prod.svn01                              3600 IN A               10.25.50.250
 prod.tcnode02                           3600 IN A               10.25.81.78
 prod.web01                              3600 IN A               10.25.50.50
@@ -75,7 +80,7 @@ nfs01.prod                              3600 IN A               10.25.73.100
 ntp01                                   3600 IN CNAME           ntp01.prod.topcoder.com.
 ntp01.prod                              3600 IN A               192.168.10.51
 oltp01.prod                             3600 IN CNAME           db01.prod.topcoder.com.
-smtp                                    3600 IN CNAME           smtp01.prod.topcoder.com.
+smtp                                    3600 IN CNAME           prod.smtp01.topcoder.com.
 smtp01.prod                             3600 IN A               192.168.12.20
 smtp02.prod                             3600 IN CNAME           ntp01.prod.topcoder.com.
 software                                3600 IN A               10.25.45.110
