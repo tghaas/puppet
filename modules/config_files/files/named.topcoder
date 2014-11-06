@@ -18,7 +18,7 @@ apirediscache                           3600 IN CNAME           apicache.etcbyy.
 app-wlth13                              3600 IN A               192.168.12.85
 app-wlth14                              3600 IN CNAME           prod.studio01.topcoder.com.
 app-wlth15                              3600 IN CNAME           prod.tcnode02.topcoder.com.
-app-wlth16                              3600 IN A               10.25.81.76
+app-wlth16                              3600 IN CNAME           prod.direct01.topcoder.com.
 app-wlth17                              3600 IN A               192.168.12.90
 app-wlth18                              3600 IN CNAME           prod.software01.topcoder.com.
 app00.prod                              3600 IN A               192.168.12.70
@@ -40,8 +40,8 @@ arena-app.prod                          3600 IN CNAME           farm-controller0
 arena-listener.prod                     3600 IN CNAME           arena-listener01.prod.topcoder.com.
 arena-listener01.prod                   3600 IN A               192.168.7.58
 cache-wlth01                            3600 IN CNAME           prod.cache01.topcoder.com.
-cache01.prod                            3600 IN A               10.25.76.10
-cach01.prod                             3600 IN A               10.25.76.10
+cache01.prod                            3600 IN CNAME           prod.cache02.topcoder.com.
+cach01.prod                             3600 IN CNAME           prod.cache02.topcoder.com.
 coder                                   3600 IN A               10.25.45.111
 community                               3600 IN A               10.25.45.103
 db01.prod                               3600 IN A               10.25.94.50
@@ -67,6 +67,7 @@ prod.cache02                            3600 IN A               10.25.76.11
 prod.direct01                           3600 IN A               10.25.81.76
 prod.direct-api01                       3600 IN A               10.25.80.51
 prod.jboss-api01                        3600 IN A               10.25.81.81
+prod.mf01                               3600 IN A               10.25.50.75
 prod.nfs01                              3600 IN A               10.25.73.100
 prod.oltp01                             3600 IN A               10.25.94.50
 prod.software01                         3600 IN A               10.25.81.75

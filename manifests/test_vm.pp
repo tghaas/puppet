@@ -1,18 +1,23 @@
-include ntp
-include java
-#include ldap
-include download
-include bash
 
-java::jdk { 'jdk8.05':
-  java_archive => 'jdk-8u5-linux-x64.tar.gz',
-  java_home    => '/usr/local/java/jdk1.8.0_05',
-  java_folder  => 'jdk1.8.0_05';
+class { '::ntp':
+  servers => [ 'ntp.topcoder.com', 'ntp1.topcoder.com' ],
+}
+#include java
+#include ldap
+#include download
+#include bash
+class { 'timezone':
+  timezone => 'America/New_York',
+}
+#java::jdk { 'jdk8.05':
+#  java_archive => 'jdk-8u5-linux-x64.tar.gz',
+#  java_home    => '/usr/local/java/jdk1.8.0_05',
+#  java_folder  => 'jdk1.8.0_05';
 #  'jdk7.45':
 #  java_archive => 'jdk-7u45-linux-x64.tar.gz',
 #  java_home    => '/usr/local/java/jdk1.7.0_45/',
 #  java_folder  => 'jdk1.7.0_45';
-}
+#}
 #class {'sethostname': 
 #	fqdn => 'PROD.test.topcoder.com'
 #}	
@@ -27,9 +32,9 @@ java::jdk { 'jdk8.05':
 #  target  => '/usr/local/java/jdk1.8.0_05',
 #  require => Java::Jdk['jdk8.05'],
 #}
-class {'nodejs':
-  version => 'v0.10.30'
-}
+#class {'nodejs':
+#  version => 'v0.10.30'
+#}
 #exec { 'install npm java':
 #  path        => '/usr/bin:/usr/sbin:/usr/local/java/jdk1.8.0_05/bin',
 #  environment => 'JAVA_HOME=/usr/local/java/jdk1.8.0_05',
@@ -49,11 +54,11 @@ class {'nodejs':
 #          Package ['java-1.7.0-openjdk'],
 #          ]
 #}
-package { 'forever':
-  ensure   => present,
-  provider => 'npm',
-  require  => Class['nodejs'],
-}
+#package { 'forever':
+#  ensure   => present,
+#  provider => 'npm',
+#  require  => Class['nodejs'],
+#}
 #home_dir::dir { 'tcnode2':
 #  home_dir_archive => 'tcnode2.20140819.tgz',
 # home_dir_owner   => 'web',
