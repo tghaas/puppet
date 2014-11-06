@@ -13,6 +13,8 @@ topcoder.com.							3600 IN MX 5            ALT1.ASPMX.L.GOOGLE.COM.
 topcoder.com.							3600 IN MX 5            ALT2.ASPMX.L.GOOGLE.COM.
 topcoder.com.							3600 IN MX 10           ASPMX2.GOOGLEMAIL.COM.
 topcoder.com.							3600 IN MX 10           ASPMX3.GOOGLEMAIL.COM.
+topcoder.com.							3600 IN NS              dns01.topcoder.com.
+topcoder.com.							3600 IN NS              dns02.topcoder.com.
 api                                     3600 IN A               10.25.45.102
 apirediscache                           3600 IN CNAME           apicache.etcbyy.0001.use1.cache.amazonaws.com.
 app-wlth13                              3600 IN A               192.168.12.85
