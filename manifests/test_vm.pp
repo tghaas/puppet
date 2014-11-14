@@ -14,12 +14,12 @@ bind::server::conf { '/etc/named.conf':
     'topcoder.com' => [
       'type slave',
       'masters { 10.25.70.15; }',
-      'file "named.topcoder"',
+      'file "/var/named/named.topcoder"',
     ],
     '70.25.10.in-addr.arpa' => [
       'type slave',
       'masters { 10.25.70.15; }',
-      'file "70.25.10.in-addr.arpa"',
+      'file "/var/named/70.25.10.in-addr.arpa"',
     ],
   },
 }
