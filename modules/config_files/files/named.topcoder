@@ -28,7 +28,7 @@ app01.prod                              3600 IN A               192.168.12.71
 app03.prod                              3600 IN A               192.168.12.73
 app04.prod                              3600 IN A               192.168.12.74
 app05.prod                              3600 IN A               192.168.12.75
-app06.prod                              3600 IN A               192.168.12.76
+app06.prod                              3600 IN CNAME           prod.mm01.topcoder.com.
 app07.prod                              3600 IN A               192.168.12.77
 app08.prod                              3600 IN A               192.168.12.78
 app09.prod                              3600 IN CNAME           prod.app09.topcoder.com.
@@ -70,6 +70,7 @@ prod.direct01                           3600 IN A               10.25.81.76
 prod.direct-api01                       3600 IN A               10.25.80.51
 prod.jboss-api01                        3600 IN A               10.25.81.81
 prod.mf01                               3600 IN A               10.25.50.75
+prod.mm01                               3600 IN A               10.25.81.60
 prod.nfs01                              3600 IN A               10.25.73.100
 prod.oltp01                             3600 IN A               10.25.94.50
 prod.software01                         3600 IN A               10.25.81.75
