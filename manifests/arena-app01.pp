@@ -16,6 +16,12 @@ download::file {
   '/tmp/listener2.20141203.tgz':
     uri     => 'http://10.25.45.226/listener2.20141203.tgz',
     timeout => 900;
+  '/tmp/control2.20141203.tgz':
+    uri     => 'http://10.25.45.226/control2.20141203.tgz',
+    timeout => 900;
+  '/tmp/tomcat2.20141203.tgz':
+    uri     => 'http://10.25.45.226/tomcat2.20141203.tgz',
+    timeout => 900;    
 }
 home_dir::dir { 'listener2':
   home_dir_archive => 'listener2.20141203.tgz',
